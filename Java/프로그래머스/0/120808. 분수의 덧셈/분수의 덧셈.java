@@ -1,5 +1,6 @@
 // 1. 두 분모를 최소공배수로 맞춰준다.
 // 2. 두 분수의 합을 배열에 담는다.
+// 3. 유클리드 호제법
 class Solution {
     public int[] solution(int numer1, int denom1, int numer2, int denom2) {
         
