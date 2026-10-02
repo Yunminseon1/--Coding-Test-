@@ -4,6 +4,7 @@ class Solution {
         
         for (int i = 0; i < absolutes.length; i++) {
             
+            // true 면 +, false면 - 붙여주기
             if (signs[i]) {
                 answer += absolutes[i];
             } else {
