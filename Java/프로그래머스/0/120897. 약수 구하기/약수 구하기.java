@@ -9,7 +9,7 @@ class Solution {
                 answer.add(i);
             }
         }
-        
+        // ArrayList갔다 다시 int로 변환 
         return answer.stream().mapToInt(Integer::intValue).toArray();
     }
 }
