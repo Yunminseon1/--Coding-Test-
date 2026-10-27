@@ -1,14 +1,17 @@
+import java.util.Arrays;
+
 class Solution {
     public int solution(int[] sides) {
-        int max = Math.max(sides[0],
-                    Math.max(sides[1], sides[2]));
+        Arrays.sort(sides);
 
-        int sum = sides[0] + sides[1] + sides[2];
+        int A = sides[0];
+        int B = sides[1];
+        int C = sides[2];
 
-        if (max < sum - max) {
+        if (C < A + B) {
             return 1;
+        } else {
+            return 2;
         }
-
-        return 2;
     }
 }
