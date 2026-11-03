@@ -10,7 +10,7 @@ class Solution {
             }else if(c == '0'){
                 answer += "5"; // 바위 -> 보
             }else if(c == '5'){
-                answer += "2"; // 보 => 가위
+                answer += "2"; // 보 -> 가위
             }
         }
         return answer;
