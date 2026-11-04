@@ -1,14 +1,27 @@
-import java.util.Arrays;
-
 class Solution {
     public String solution(String my_string) {
-        // 1. 모든 문자를 소문자로 변환한 뒤 char 배열로 변환함 
-        char[] arr = my_string.toLowerCase().toCharArray();
         
-        // 2. 오름차순 정렬
-        Arrays.sort(arr);
+        int[] counts = new int[26];
+        int len = my_string.length();
         
-        // 3. String으로 변환하여 반환
-        return new String(arr);
+        for (int i = 0; i < len; i++) {
+            char c = my_string.charAt(i);
+            
+            if (c >= 'A' && c <= 'Z') {
+                counts[c - 'A']++;
+            } else {
+                counts[c - 'a']++;
+            }
+        }
+        
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < 26; i++) {
+            while (counts[i] > 0) {
+                sb.append((char) (i + 'a'));
+                counts[i]--;
+            }
+        }
+        
+        return sb.toString();
     }
 }
